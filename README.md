@@ -25,6 +25,35 @@ In your JSDoc configuration file `hookdoc-conf.json` the following options are e
 
 Run your `jsdoc` command with the input files and `-c hookdoc-conf.json`.
 
+### Define Action Docblock
+Define `@hook` attribute with the name of the action:
+```php
+<?php
+/**
+ * Enqueue scripts for all admin pages.
+ *
+ * @since 2.8.0
+ * @hook admin_enqueue_scripts
+ * @param {string} $hook_suffix The current admin page.
+ */
+do_action( 'admin_enqueue_scripts', $hook_suffix );
+```
+
+### Define Filter Docblock
+Define `@hook` attribute with the name of the filter and a `@returns` attribute:
+```php
+/**
+ * Filters the title tag content for an admin page.
+ *
+ * @since 3.1.0
+ * @hook admin_title
+ * @param {string} $admin_title The page title, with extra context added.
+ * @param {string} $title       The original page title.
+ * @returns {string} The title
+ */
+$admin_title = apply_filters( 'admin_title', $admin_title, $title );
+```
+
 ## Generate example documentation
 To generate an example documentation change to the `node_modules/wp-hookdoc` folder and run:
 ```sh
