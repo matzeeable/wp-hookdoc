@@ -1,0 +1,30 @@
+{
+  "name": "wp-hookdoc",
+  "version": "1.0.0",
+  "description": "An API documentation generator for your WordPress actions and filters.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "example": "rm -rf example/out && jsdoc example/src -c example/hookdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matzeeable/wp-hookdoc.git"
+  },
+  "keywords": [
+    "action",
+    "filters",
+    "wordpress",
+    "documentation",
+    "docs"
+  ],
+  "author": "Matthias Günter <support@matthias-web.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matzeeable/wp-hookdoc/issues"
+  },
+  "homepage": "https://github.com/matzeeable/wp-hookdoc#readme"
+}
