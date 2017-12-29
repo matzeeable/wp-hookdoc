@@ -8,7 +8,9 @@ var self = this;
     <?js } ?>
 
     <h4 class="name" id="<?js= id ?>"><?js= (data.returns ? 'apply_filters' : 'do_action') +
-    '(\'' + name + '\'' + (data.signature && data.params && data.params.length ? ', ' + data.signature.replace('(', '') : ')') ?></h4>
+    '( \'' + name + '\'' + (data.signature && data.params && data.params.length
+        ? ', ' + data.signature.replace('(', '').replace(')', ' )')
+        : ' )') ?></h4>
 
     <?js if (data.summary) { ?>
     <p class="summary"><?js= summary ?></p>
