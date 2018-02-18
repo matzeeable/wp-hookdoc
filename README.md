@@ -61,7 +61,7 @@ npm run example
 ```
 
 You will find the output in `node_modules/wp-hookdoc/example/out`:
-![example output](https://i.imgur.com/r4cs3mJ.png)
+![example output](https://i.imgur.com/7UmzmLz.png)
 
 ## License
 This module is MIT licensed.
